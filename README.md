@@ -22,7 +22,11 @@ Resultado visual dinâmico**: Assim que o IMC é calculado, as cores do resultad
 O que usei para construir?
 
  HTML5: tentei deixar o mais semantico possivel
+
+ 
  CSS3: Layout feito com interações com o mouse (`:hover`) e transições fluidas combinando `opacity` com `translateY`.
+
+ 
  JavaScript: Captura de dados do DOM, lógica matemática para o cálculo e gerenciamento dinâmico de classes para ativar os efeitos visuais.
 
 
