@@ -27,7 +27,3 @@ O que usei para construir?
  JavaScript: Captura de dados do DOM, lógica matemática para o cálculo e gerenciamento dinâmico de classes para ativar os efeitos visuais.
 
 
-
-
-
-Feito com dedicação por [motatur](https://github.com) 😊
