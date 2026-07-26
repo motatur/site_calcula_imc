@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #dff4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    width: 550px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.container h2{
+    text-align: center;
+    margin-bottom: 10px;
+    color:rgb(65, 65, 65);
+    font-size: 32px;
+    font-family: sans-serif;
+}
+.container p{
+    text-align: center;
+    margin-bottom: 10px;
+    color:rgb(0, 0, 0);
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+
+.label-title{
+user-select: none;
+font-weight: bold;
+display: block;
+margin-bottom: 8px;
+color: #444;
+}
+
+.input-wrapper{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+}
+.input-wrapper input{
+    border: none ;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    font-size: 16px;
+}
+
+.gender-selector{
+display: flex;
+gap: 15px;
+
+}
+.gender-btn{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-hidden{
+    position: absolute;
+    opacity: 0;
+}
+/* Aparência inicial */
+.btn-woman{
+    background-color: rgb(250, 196, 205);
+    color: rgb(241, 104, 127);
+    border: 1px solid rgb(241, 104, 127);
+}
+
+.btn-men{
+    background-color: rgb(220, 235, 255);
+    color: rgb(116, 140, 248);
+    border: 1px solid rgb(116, 140, 248);
+}
+
+/* Aparência quando selecionado */
+#woman:checked + .btn-woman{
+    background-color: rgb(241, 104, 127);
+    color: white;
+}
+
+#men:checked + .btn-men{
+    background-color: rgb(116, 140, 248);
+    color: white;
+}
+.btn-woman:hover{
+background-color: rgb(252, 215, 222);
+transform: translateY(-3px);
+box-shadow: 0 4px 10px rgba(241, 104, 127, 0.3);
+}
+.btn-men:hover{
+background-color: rgb(232, 241, 255);
+box-shadow: 0 4px 10px rgba(116, 140, 248, 0.3);
+transform: translateY(-3px);    
+}
+.form-group{
+    margin-bottom: 20px;
+}
+.unit{
+font-size: 15px;
+color:#666;
+font-weight: 700;
+}
+.input-wrapper input::placeholder{
+    color: #8d8d8d;
+    font-size: 15px;
+}
+.btn-calculate{
+width: 100%;
+background-color: rgb(22, 185, 250);
+border-radius: 8px;
+border: 1px solid transparent;
+color: white;
+cursor: pointer;
+font-size: 15px;
+font-weight: 700;
+padding: 12px ;
+transition: all .3s ease;
+}
+.btn-calculate:hover{
+background-color: rgb(0, 98, 155);
+transform: scale(1.02);
+}
+.btn-calculate:active{
+background-color:rgb(1, 112, 177);
+transform: scale(0.98);
+}
+.resultado{
+text-align: center;
+margin-top: 30px;
+border-top: 1px solid #ddd;
+padding-top: 20px;
+
+opacity: 0;
+transform: translateY(20px);
+transition: all 0.5s ease;
+}
+.resultado.mostrar{
+    opacity: 1;
+    transform: translateY(0);
+}
+#valor-imc{
+font-size: 48px;
+font-weight: bold;
+color: rgb(0, 162, 255);
+margin: 15px 0;
+transition: color 0.5s ease, transform 0.3s ease;
+}
+#classificacao{
+font-size: 18px;
+font-weight: 600;
+color: #444;
+}
+.abaixo{
+color: #3498db !important;
+}
+.normal {
+color: #13d865 !important;
+}
+
+.sobrepeso {
+color: #f1c40f !important;
+}
+
+.obesidade {
+color: #e74c3c !important;
+
+}
+.input-wrapper:focus-within{
+    border-color: rgb(0, 162, 255);
+    box-shadow: 0 0 5px rgba(0, 162, 255, 0.3);
+}
+/* Cores do resultado */
+.imc-abaixo{
+    color: #3498db !important;
+}
+
+.imc-normal{
+    color: #13d865 !important;
+}
+
+.imc-sobrepeso{
+    color: #f1c40f !important;
+}
+
+.imc-obesidade{
+    color: #e74c3c !important;
+}
+#mensagem{
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+
+    background-color: #fff5f5;
+    border: 1px solid #fc8181 ;
+    color: #c53030;
+
+
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+#mensagem.mostrar-erro {
+    opacity: 1;
+    transform: translateY(0);
+}
